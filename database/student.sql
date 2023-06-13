@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 02, 2023 at 02:26 AM
+-- Generation Time: Jun 05, 2023 at 02:15 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -89,7 +89,8 @@ INSERT INTO `student` (`id`, `fname`, `lname`, `email`, `homepage`, `password`, 
 (45, 'a', 'a', 'a@teste.com', 'http://www.pcit.com.br', 'a', ''),
 (46, 'Rodolfo', 'Silva', 'rodolfo@silva.com.br', 'http://www.rodolfo.silva.com.br', '12345678', ''),
 (47, 'Rodolfo', 'Silva', 'rodolfo@silva.com.br', 'http://www.rodolfo.silva.com.br', '12345678', '							Mys description is ...'),
-(48, 'First_name', 'Last_name', 'email@here.com', 'http://www.rcs.com', '12345', 'Description here.							');
+(48, 'First_name', 'Last_name', 'email@here.com', 'http://www.rcs.com', '12345', 'Description here.							'),
+(49, 'Rodolfo', 'Silva', 'r@s.ca', 'http://www.teste.com.br', '12345', '                            My description is here.');
 
 --
 -- Indexes for dumped tables
@@ -109,7 +110,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -16,6 +16,8 @@
                 <img id=logo src='img/logo.png'>
 			</div>
 			<main>
+				<br>
+				<br>
 				<div id='divmain'>
 		        		<table id='table'>
 			     			<tr>
