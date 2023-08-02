@@ -1,7 +1,7 @@
 <?php
   // To save some time we are going to create a class to hold the database connection information.
   // As mentioned in the PDF we will define our class using the class keyword followed by the name of our class.
-  class Database{
+  class crud{
     // A private keyword, as the name suggests is the one that can only be accessed from within the class in which it is defined. 
     // All the keywords are by default under the public category unless they are specified as private or protected.
     private $connection;
@@ -38,6 +38,43 @@
  		    $res = mysqli_query($this->connection, $sql);
  		    return $res;
 	  }
+    public function displayUser($username,$password)
+    {
+      $query = "SELECT id,count(*) as tot FROM student WHERE username = '$username' AND password = '$password'";
+      $result = $this->connection->query($query);
+      if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $count = $row['tot'];
+        //check if any matches found
+        if ($count == 1){
+          echo 'Logged in Successfully.';
+          foreach  ($result as $row){
+          //access the existing session created automatically by the server
+          session_start();
+          //take the user's id from the database and store it in a session variable
+          $_SESSION['id'] = $row['id'];
+          //redirect the user
+          Header('Location: ../adm.php');
   }
-  $database = new Database();
+}
+else {
+  echo 'Invalid Login';
+  header('location:../index.php');
+}
+$conn = null;
+      }else{
+        echo "User not found";
+      }
+    }
+    public function execute($query){
+      $result = $this->connection->query($query);
+      if ($result == false){
+      echo 'Error: cannot execute the command';
+      return false;
+    }else{
+      return true;
+    }
+  }
+}
+$database = new crud();
 ?>

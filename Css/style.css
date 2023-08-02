@@ -2,12 +2,12 @@ body{
  margin: 0 auto;
  font:100% arial, helvetica, sans-serif, verdana;
  color: white;
- background-image: linear-gradient(#6495ED,#6959CD);
+ background-image: linear-gradient(darkblue,black);
  background-repeat: no-repeat;
  background-attachment: fixed;
  text-align: left;
  text-shadow: 1px 1px 2px #000000;
- margin: 0 auto;    
+ margin: 5%;   
 }
 form{
  font-family:arial;
@@ -19,11 +19,11 @@ p{
 }
 #div{
   font-family:arial;
-  display: inline-block;
+  display: flex;
   max-width: 35%;
   order:2;
  }
-#divheader{
+header{
  font-family:arial;
  border: none; 
  margin: auto;
@@ -31,19 +31,17 @@ p{
  height: auto;
  order:1;
 }
-#divmain{
+main{
  font-family:arial;
- display: inline-block;
- max-width: 35%;
- order:2;
- filter: drop-shadow(16px 16px 5px black);
+ justify-content: center;
+ display:inline;
 }
- #divfooter{
- background:lightgray;
+ footer{
+ background:black;
  color: white;
  font-family:arial;
  border: none; 
- display: grid;
+ display: flex;
  margin: auto;
  order:3;
 }
@@ -59,7 +57,7 @@ hr{
  left: 1;
  right: 0;
  border: 0px solid;
- filter: drop-shadow(16px 16px 5px black);
+ #filter: drop-shadow(16px 16px 5px black);
 }
 #banner{
   max-width:100%;
@@ -71,11 +69,11 @@ img{
 }
 #button_menu {
  background-color: goldenrod;
- padding: 10px;
+ padding: 5px;
  text-decoration: none;
  border-radius: 10px;
  cursor: pointer;
- display:grid;
+ display:flex;
  color:#ffffff;
 }
 input {
@@ -84,7 +82,7 @@ input {
   text-decoration: none;
   border-radius: 10px;
   cursor: pointer;
-  display:grid;
+  display:flex;
   color:#ffffff;
  }
 textarea {
@@ -93,18 +91,15 @@ textarea {
   text-decoration: none;
   border-radius: 10px;
   cursor: pointer;
-  display:grid;
+  display:flex;
   color:#ffffff;
  }
 #menu{
  font-family:arial;
- border: none; 
- display: inline-flex;
+ border: none;
+ justify-content: center;
+ display:flex;
  margin: auto;
- max-width:200px;
- max-height:150px;
- width: auto;
- height: auto;
  border: 0px solid;
  filter: drop-shadow(16px 16px 5px black);
 }
@@ -115,8 +110,12 @@ textarea {
  background-attachment: fixed;
  text-align: left;
  text-shadow: 1px 1px 2px #000000;
- margin: 0 auto;    
-}
+ margin: 0 auto;  
+ align-items: center;
+ }
+ td{
+  vertical-align: top;
+ }
 a:visited {
   color: white;
 }
@@ -125,4 +124,35 @@ a:hover {
 }
 input{
   max-width: 50%;
+}
+div{
+  display: grid;
+}
+#newuser{
+display: inline;
+background: white;
+}
+#user{
+display: inline;
+background: white;
+}
+fieldset {
+ color: white;
+ background-image: linear-gradient(goldenrod);
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ text-align: left;
+ text-shadow: 1px 1px 2px #000000;
+ margin: 0 auto;  
+ align-items: center;
+ }
+legend, span {
+ color: white;
+ text-shadow: 1px 1px 2px #000000;
+}
+#divform{
+  display: inline-table;
+}
+#photo{
+  width: 150px;
 }

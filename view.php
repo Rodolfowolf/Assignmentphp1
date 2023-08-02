@@ -1,6 +1,11 @@
 <?php
-	require_once('database.php');
+	require_once('common/database.php');
 	$res = $database->read();
+	session_start();
+	if (!isset($_SESSION['id'])) {
+		header('location:index.php');
+		exit();
+	}else{
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,7 +16,7 @@
 			<div id='divheader'>
 				<img src='img/header2.jpeg'>
 				<?php
-	            require_once('menu.php');
+	            require_once('common/menu.php');
                 ?>
                 <img id=logo src='img/logo.png'>
 			</div>
@@ -46,9 +51,12 @@
 			<footer>
 				<div id='divfooter'>
        			<?php
-	  			    require_once('footer.php');
+	  			    require_once('common/footer.php');
        			?>
 				</div>
       		</footer> 
    		</body>
 </html>
+<?php
+	}
+	?>
